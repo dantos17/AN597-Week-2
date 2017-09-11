@@ -12,3 +12,19 @@ Okay that didn't work. Came up with error message saying I had an extra comma.
 v[seq(from=1, to=22, by=3)]
 
 It worked! But it started with the first word, not the third one. If I change the from=1 to from=0, it starts with the third word "Buck"
+
+m<-matrix(data=1:80, nrow=8, ncol=10, byrow=FALSE)
+
+x<-m[ ,2,3,6]
+I can't figure out how assign multiple columns of data as a single variable
+
+a<- array (data=400:1, dim= c(5,5,4,4))
+
+a[1,1,1,2]
+ =300
+a[2,3,2, ]
+ =364 264 164 64
+a[1:5, 1:5,3,3]
+ =the section of the matrix that is 3,3; 150:126
+ 
+ 
