@@ -63,11 +63,11 @@ a[1:5, 1:5,3,3]
  names(p3) <- c("Primates","Primates")
  
  q<- matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2), nrow=5, ncol=3, byrow=TRUE)
- as.data.frame(q)
- as.logical(q[ ,2])
- as.factor(q[ ,3])
+df<- as.data.frame(q)
+df[ ,2] <- as.logical(df[ ,2])
+df[ ,3] <- as.factor(df[ ,3])
  str(q)
  
- That didn't work
+So now each data type is correct, but the second column says NA instead of TRUE/FALSE
  
  
