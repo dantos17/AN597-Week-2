@@ -1,0 +1,14 @@
+---
+title: "Challenge Notes"
+output: html_document
+---
+
+v<- c("Stately,","plump","Buck","Mulligan","came","from","the","stairhead,","bearing","a","bowl","of","lather","on","which","a","mirror","and","a","razor","lay","crossed")
+
+v[(from=1, to=22, by=3)]
+
+Okay that didn't work. Came up with error message saying I had an extra comma. 
+
+v[seq(from=1, to=22, by=3)]
+
+It worked! But it started with the first word, not the third one. If I change the from=1 to from=0, it starts with the third word "Buck"
