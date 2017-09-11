@@ -27,4 +27,39 @@ a[2,3,2, ]
 a[1:5, 1:5,3,3]
  =the section of the matrix that is 3,3; 150:126
  
+ For the Primates list, I know that I want the name to be primates. Then maybe a separate list for each bullet point? 
  
+ c1<- 'Cercopithecidae'
+ h1<- 'Hylobatidae'
+ h2<- 'Hominidae'
+ c2<-list(c1, h1, h2)
+ names(c2) <- "Catarrhini"
+ c3<- 'Cebidae'
+ a1<- 'Atelidae'
+ p1<- 'Pitheciidae'
+ p2<- list(c3, a1, p1)
+ names(p2) <- "Platyrrhini"
+ a2<- list(p2, c2)
+ names(a2) <- c("Anthropoidea", "Anthropoidea")
+ t1 <- 'Tarsiidae'
+ t2 <- list(t1)
+ names(t2) <- "Tarsioidea"
+ h3<- list(a2, t2)
+ names(h3) <- c("Haplorhini","Haplorhini")
+ c4<- 'Cheirogaleidae'
+ l1<- 'Lepilemuridae'
+ i1<- 'Indriidae'
+ l2<- 'Lemuridae'
+ d1<- 'Daubentoniidae'
+ l3<- list(c4,l1,i1,l2,d1)
+ names(l3) <- "Lemuroidea"
+ l4<- 'Lorisidae'
+ g1<- 'Galagidae'
+ l5<- list(l4,g1)
+ names(l5) <- "Lorisoidea"
+ s1<- list(l5, l3)
+ names(s1) <- c("Strepsirhini","Strepsirhini")
+ p3<- list(h3,s1)
+ names(p3) <- c("Primates","Primates")
+ 
+ q<- matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2), nrow=5, ncol=3, byrow=TRUE)
