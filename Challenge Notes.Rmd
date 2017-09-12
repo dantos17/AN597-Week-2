@@ -15,8 +15,10 @@ Ulysses <- c("Stately, plump Buck Mulligan came from the stairhead, bearing a bo
 
 e<- gsub("[[:punct:]]","",Ulysses) 
 #So the punctuation won't count as a command
+
 xspt<- c(unlist(strsplit(Ulysses, " ")))
 #I'm not quite sure why you have to unlist it
+
 xspt[seq(from=1, to=22, by=3)] 
 #This was the same as my last step, calls for every third element
 
@@ -29,8 +31,8 @@ x<-m[ ,c(2,3,6)]
 x<-m[c(6,8), ]
 #Leave column empty, use c() to do multiple rows
 
-x<-m[2,c(2:6,9)]
-#I don't think that worked, wording of question 
+x<-m[c(2:6), c(2:9)]
+ 
 
 a<- array (data=400:1, dim= c(5,5,4,4))
 
