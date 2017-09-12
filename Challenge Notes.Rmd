@@ -15,8 +15,12 @@ It worked! But it started with the first word, not the third one. If I change th
 
 m<-matrix(data=1:80, nrow=8, ncol=10, byrow=FALSE)
 
-x<-m[ ,2,3,6]
-I can't figure out how assign multiple columns of data as a single variable
+x<-m[ ,c(2,3,6)]
+
+x<-m[c(6,8), ]
+
+x<-m[2,c(2:6,9)]
+I don't think that worked
 
 a<- array (data=400:1, dim= c(5,5,4,4))
 
