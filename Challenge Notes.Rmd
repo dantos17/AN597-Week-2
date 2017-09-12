@@ -3,6 +3,8 @@ title: "Challenge Notes"
 output: html_document
 ---
 
+#Challenge 1
+
 v<- c("Stately,","plump","Buck","Mulligan","came","from","the","stairhead,","bearing","a","bowl","of","lather","on","which","a","mirror","and","a","razor","lay","crossed")
 
 v[(from=1, to=22, by=3)]
@@ -22,6 +24,7 @@ xspt<- c(unlist(strsplit(Ulysses, " ")))
 xspt[seq(from=1, to=22, by=3)] 
 #This was the same as my last step, calls for every third element
 
+#Challenge 2
 
 m<-matrix(data=1:80, nrow=8, ncol=10, byrow=FALSE)
 
@@ -33,6 +36,7 @@ x<-m[c(6,8), ]
 
 x<-m[c(2:6), c(2:9)]
  
+#Challenge 3
 
 a<- array (data=400:1, dim= c(5,5,4,4))
 
@@ -44,7 +48,8 @@ a[1:5, 1:5,3,3]
 # =the section of the matrix that is 3,3; 150:126
  
 #For the Primates list, I know that I want the name to be primates. Then maybe a separate list for each bullet point? 
- 
+#Challenge 4
+
  c1<- 'Cercopithecidae'
  
  h1<- 'Hylobatidae'
@@ -108,6 +113,8 @@ a[1:5, 1:5,3,3]
  p3<- list(h3,s1)
  
  names(p3) <- c("Primates","Primates")
+
+#Challenge 5
 
  q<- matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2), nrow=5, ncol=3, byrow=TRUE)
 
