@@ -7,31 +7,41 @@ v<- c("Stately,","plump","Buck","Mulligan","came","from","the","stairhead,","bea
 
 v[(from=1, to=22, by=3)]
 
-Okay that didn't work. Came up with error message saying I had an extra comma. 
+#Okay that didn't work. Came up with error message saying I had an extra comma. 
 
 v[seq(from=1, to=22, by=3)]
+#Example code from girl in class, how the module does it
+Ulysses <- c("Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed")
 
-It worked! But it started with the first word, not the third one. If I change the from=1 to from=0, it starts with the third word "Buck"
+e<- gsub("[[:punct:]]","",Ulysses) 
+#So the punctuation won't count as a command
+xspt<- c(unlist(strsplit(Ulysses, " ")))
+#I'm not quite sure why you have to unlist it
+xspt[seq(from=1, to=22, by=3)] 
+#This was the same as my last step, calls for every third element
+
 
 m<-matrix(data=1:80, nrow=8, ncol=10, byrow=FALSE)
 
 x<-m[ ,c(2,3,6)]
+#Leave row empty, use C() to do multiple columns
 
 x<-m[c(6,8), ]
+#Leave column empty, use c() to do multiple rows
 
 x<-m[2,c(2:6,9)]
-I don't think that worked
+#I don't think that worked, wording of question 
 
 a<- array (data=400:1, dim= c(5,5,4,4))
 
 a[1,1,1,2]
- =300
+# =300
 a[2,3,2, ]
- =364 264 164 64
+# =364 264 164 64
 a[1:5, 1:5,3,3]
- =the section of the matrix that is 3,3; 150:126
+# =the section of the matrix that is 3,3; 150:126
  
- For the Primates list, I know that I want the name to be primates. Then maybe a separate list for each bullet point? 
+#For the Primates list, I know that I want the name to be primates. Then maybe a separate list for each bullet point? 
  
  c1<- 'Cercopithecidae'
  h1<- 'Hylobatidae'
