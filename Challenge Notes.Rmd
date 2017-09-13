@@ -5,8 +5,9 @@ output: html_document
 
 #Challenge 1
 
-```{r v<- c("Stately,","plump","Buck","Mulligan","came","from","the","stairhead,","bearing","a","bowl","of","lather","on","which","a","mirror","and","a","razor","lay","crossed")
-v[seq(from=1, to=22, by=3)]} 
+```{r echo=TRUE}
+v<- c("Stately,","plump","Buck","Mulligan","came","from","the","stairhead,","bearing","a","bowl","of","lather","on","which","a","mirror","and","a","razor","lay","crossed")
+v[seq(from=1, to=22, by=3)] 
 
 ```
 
@@ -17,7 +18,7 @@ v[(from=1, to=22, by=3)]
 
 #Okay that didn't work. Came up with error message saying I had an extra comma. 
 
-
+```{r echo=TRUE}
 #Example code from girl in class, how the module does it
 Ulysses <- c("Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed")
 
@@ -29,9 +30,12 @@ xspt<- c(unlist(strsplit(Ulysses, " ")))
 
 xspt[seq(from=1, to=22, by=3)] 
 #This was the same as my last step, calls for every third element
+```
+
+
 
 #Challenge 2
-
+```{r echo=TRUE}
 m<-matrix(data=1:80, nrow=8, ncol=10, byrow=FALSE)
 
 x<-m[ ,c(2,3,6)]
@@ -41,9 +45,12 @@ x<-m[c(6,8), ]
 #Leave column empty, use c() to do multiple rows
 
 x<-m[c(2:6), c(2:9)]
+```
+
+
  
 #Challenge 3
-
+```{r echo=TRUE}
 a<- array (data=400:1, dim= c(5,5,4,4))
 
 a[1,1,1,2]
@@ -52,6 +59,9 @@ a[2,3,2, ]
 # =364 264 164 64
 a[1:5, 1:5,3,3]
 # =the section of the matrix that is 3,3; 150:126
+```
+
+
  
 #For the Primates list, I know that I want the name to be primates. Then maybe a separate list for each bullet point? 
 #Challenge 4
@@ -121,8 +131,8 @@ a[1:5, 1:5,3,3]
  names(p3) <- c("Primates","Primates")
 
 #Challenge 5
-
- q<- matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2), nrow=5, ncol=3, byrow=TRUE)
+```{r echo=TRUE}
+q<- matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2), nrow=5, ncol=3, byrow=TRUE)
 
 df<- as.data.frame(q)
 
@@ -130,9 +140,6 @@ df[ ,2] <- as.logical(df[ ,2])
 
 df[ ,3] <- as.factor(df[ ,3])
  str(df)
-#I was messed up before because I was trying to do str(q), which is what I named the matrix, but I renamed it df after I set it up as a data frame
+```
 
- 
-#So now each data type is correct, but the second column says NA instead of TRUE/FALSE
- 
- 
+#I was messed up before because I was trying to do str(q), which is what I named the matrix, but I renamed it df after I set it up as a data frame
