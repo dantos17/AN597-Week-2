@@ -5,13 +5,19 @@ output: html_document
 
 #Challenge 1
 
-v<- c("Stately,","plump","Buck","Mulligan","came","from","the","stairhead,","bearing","a","bowl","of","lather","on","which","a","mirror","and","a","razor","lay","crossed")
+```{r v<- c("Stately,","plump","Buck","Mulligan","came","from","the","stairhead,","bearing","a","bowl","of","lather","on","which","a","mirror","and","a","razor","lay","crossed")
+v[seq(from=1, to=22, by=3)]} 
+
+```
+
+
+
 
 v[(from=1, to=22, by=3)]
 
 #Okay that didn't work. Came up with error message saying I had an extra comma. 
 
-v[seq(from=1, to=22, by=3)]
+
 #Example code from girl in class, how the module does it
 Ulysses <- c("Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed")
 
