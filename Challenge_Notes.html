@@ -126,10 +126,7 @@ $(document).ready(function () {
 v[seq(from=1, to=22, by=3)] </code></pre>
 <pre><code>## [1] &quot;Stately,&quot; &quot;Mulligan&quot; &quot;the&quot;      &quot;a&quot;        &quot;lather&quot;   &quot;a&quot;       
 ## [7] &quot;a&quot;        &quot;crossed&quot;</code></pre>
-<p>v[(from=1, to=22, by=3)]</p>
-</div>
-<div id="okay-that-didnt-work.-came-up-with-error-message-saying-i-had-an-extra-comma." class="section level1">
-<h1>Okay that didn’t work. Came up with error message saying I had an extra comma.</h1>
+<p>This is what I did for the challenge, below is the code that was shown in class.</p>
 <pre class="r"><code>#Example code from girl in class, how the module does it
 Ulysses &lt;- c(&quot;Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed&quot;)
 
@@ -142,19 +139,16 @@ xspt&lt;- c(unlist(strsplit(Ulysses, &quot; &quot;)))
 xspt[seq(from=1, to=22, by=3)] </code></pre>
 <pre><code>## [1] &quot;Stately,&quot; &quot;Mulligan&quot; &quot;the&quot;      &quot;a&quot;        &quot;lather&quot;   &quot;a&quot;       
 ## [7] &quot;a&quot;        &quot;crossed&quot;</code></pre>
-<pre class="r"><code>#This was the same as my last step, calls for every third element</code></pre>
 </div>
 <div id="challenge-2" class="section level1">
 <h1>Challenge 2</h1>
 <pre class="r"><code>m&lt;-matrix(data=1:80, nrow=8, ncol=10, byrow=FALSE)
-
 x&lt;-m[ ,c(2,3,6)]
 #Leave row empty, use C() to do multiple columns
-
 x&lt;-m[c(6,8), ]
 #Leave column empty, use c() to do multiple rows
-
 x&lt;-m[c(2:6), c(2:9)]</code></pre>
+<p>Okay I know this is right because I can see it on my RStudio console but to be honest I don’t know why I’m not getting any output on my HTML file</p>
 </div>
 <div id="challenge-3" class="section level1">
 <h1>Challenge 3</h1>

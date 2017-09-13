@@ -11,12 +11,7 @@ v[seq(from=1, to=22, by=3)]
 
 ```
 
-
-
-
-v[(from=1, to=22, by=3)]
-
-#Okay that didn't work. Came up with error message saying I had an extra comma. 
+This is what I did for the challenge, below is the code that was shown in class. 
 
 ```{r echo=TRUE}
 #Example code from girl in class, how the module does it
@@ -29,7 +24,7 @@ xspt<- c(unlist(strsplit(Ulysses, " ")))
 #I'm not quite sure why you have to unlist it
 
 xspt[seq(from=1, to=22, by=3)] 
-#This was the same as my last step, calls for every third element
+
 ```
 
 
@@ -37,16 +32,14 @@ xspt[seq(from=1, to=22, by=3)]
 #Challenge 2
 ```{r echo=TRUE}
 m<-matrix(data=1:80, nrow=8, ncol=10, byrow=FALSE)
-
 x<-m[ ,c(2,3,6)]
 #Leave row empty, use C() to do multiple columns
-
 x<-m[c(6,8), ]
 #Leave column empty, use c() to do multiple rows
-
 x<-m[c(2:6), c(2:9)]
-```
 
+```
+Okay I know this is right because I can see it on my RStudio console but to be honest I don't know why I'm not getting any output on my HTML file
 
  
 #Challenge 3
