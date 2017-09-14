@@ -30,16 +30,13 @@ xspt[seq(from=1, to=22, by=3)]
 
 
 #Challenge 2
-```{r echo=TRUE}
+```{r}
 m<-matrix(data=1:80, nrow=8, ncol=10, byrow=FALSE)
-x<-m[ ,c(2,3,6)]
-#Leave row empty, use C() to do multiple columns
-x<-m[c(6,8), ]
-#Leave column empty, use c() to do multiple rows
+x<-m[ ,c(2,3,6)] #Leave row empty, use C() to do multiple columns
+x<-m[c(6,8), ] #Leave column empty, use c() to do multiple rows
 x<-m[c(2:6), c(2:9)]
-
 ```
-Okay I know this is right because I can see it on my RStudio console but to be honest I don't know why I'm not getting any output on my HTML file
+Okay I know this is right because I can see it on my RStudio console but to be honest I don't know why I'm not getting any output on my HTML file. I tried typing echo=TRUE, eval=TRUE, and cache=TRUE in the r code chunks and neither one worked.
 
  
 #Challenge 3
@@ -54,85 +51,50 @@ a[1:5, 1:5,3,3]
 # =the section of the matrix that is 3,3; 150:126
 ```
 
-
- 
-#For the Primates list, I know that I want the name to be primates. Then maybe a separate list for each bullet point? 
+For the Primates list, I know that I want the name to be primates. Then maybe a separate list for each bullet point? 
 #Challenge 4
-
- c1<- 'Cercopithecidae'
- 
- h1<- 'Hylobatidae'
- 
- h2<- 'Hominidae'
- 
- c2<-list(c1, h1, h2)
- 
- names(c2) <- "Catarrhini"
- 
- c3<- 'Cebidae'
- 
- a1<- 'Atelidae'
- 
- p1<- 'Pitheciidae'
- 
- p2<- list(c3, a1, p1)
- 
- names(p2) <- "Platyrrhini"
- 
- a2<- list(p2, c2)
- 
- names(a2) <- c("Anthropoidea", "Anthropoidea")
- 
- t1 <- 'Tarsiidae'
- 
- t2 <- list(t1)
- 
- names(t2) <- "Tarsioidea"
- 
- h3<- list(a2, t2)
- 
- names(h3) <- c("Haplorhini","Haplorhini")
- 
- c4<- 'Cheirogaleidae'
- 
- l1<- 'Lepilemuridae'
- 
- i1<- 'Indriidae'
- 
- l2<- 'Lemuridae'
- 
- d1<- 'Daubentoniidae'
- 
- l3<- list(c4,l1,i1,l2,d1)
- 
- names(l3) <- "Lemuroidea"
- 
- l4<- 'Lorisidae'
- 
- g1<- 'Galagidae'
- 
- l5<- list(l4,g1)
- 
- names(l5) <- "Lorisoidea"
- 
- s1<- list(l5, l3)
- 
- names(s1) <- c("Strepsirhini","Strepsirhini")
- 
- p3<- list(h3,s1)
- 
- names(p3) <- c("Primates","Primates")
+```{r}
+c1<- 'Cercopithecidae'
+h1<- 'Hylobatidae'
+h2<- 'Hominidae'
+Catarrhini<-list(c1, h1, h2)
+names(Catarrhini) <- "Catarrhini"
+c3<- 'Cebidae'
+a1<- 'Atelidae'
+p1<- 'Pitheciidae'
+Platyrrhini<- list(c3, a1, p1)
+names(Platyrrhini) <- "Platyrrhini"
+Anthropoidea<- list(Platyrrhini, Catarrhini)
+names(Anthropoidea) <- c("Anthropoidea", "Anthropoidea")
+Tarsioidea <- list("Tarsiidae")
+names(Tarsioidea) <- "Tarsioidea"
+Haplorhini<- list(Anthropoidea, Tarsioidea)
+names(Haplorhini) <- c("Haplorhini","Haplorhini")
+c4<- 'Cheirogaleidae'
+l1<- 'Lepilemuridae'
+i1<- 'Indriidae'
+l2<- 'Lemuridae'
+d1<- 'Daubentoniidae'
+Lemuroidea<- list(c4,l1,i1,l2,d1)
+names(Lemuroidea) <- c("Lemuroidea", "Lemuroidea","Lemuroidea","Lemuroidea","Lemuroidea")
+l4<- 'Lorisidae'
+g1<- 'Galagidae'
+Lorisoidea<- list(l4,g1)
+names(Lorisoidea) <- c("Lorisoidea", "Lorisoidea")
+Strepsirhini<- list(Lorisoidea, Lemuroidea)
+names(Strepsirhini) <- c("Strepsirhini","Strepsirhini")
+Primates<- list(Haplorhini,Strepsirhini)
+names(Primates) <- c("Primates","Primates")
+```
+Again, I'm not really sure why there is no output on my HTML file.
 
 #Challenge 5
 ```{r echo=TRUE}
 q<- matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2), nrow=5, ncol=3, byrow=TRUE)
-
 df<- as.data.frame(q)
-
 df[ ,2] <- as.logical(df[ ,2])
-
 df[ ,3] <- as.factor(df[ ,3])
  str(df)
 ```
 
-#I was messed up before because I was trying to do str(q), which is what I named the matrix, but I renamed it df after I set it up as a data frame
+Side-note: I was messed up before because I was trying to do str(q), which is what I named the matrix, but I renamed it df after I set it up as a data frame

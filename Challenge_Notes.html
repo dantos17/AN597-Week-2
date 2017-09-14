@@ -143,12 +143,10 @@ xspt[seq(from=1, to=22, by=3)] </code></pre>
 <div id="challenge-2" class="section level1">
 <h1>Challenge 2</h1>
 <pre class="r"><code>m&lt;-matrix(data=1:80, nrow=8, ncol=10, byrow=FALSE)
-x&lt;-m[ ,c(2,3,6)]
-#Leave row empty, use C() to do multiple columns
-x&lt;-m[c(6,8), ]
-#Leave column empty, use c() to do multiple rows
+x&lt;-m[ ,c(2,3,6)] #Leave row empty, use C() to do multiple columns
+x&lt;-m[c(6,8), ] #Leave column empty, use c() to do multiple rows
 x&lt;-m[c(2:6), c(2:9)]</code></pre>
-<p>Okay I know this is right because I can see it on my RStudio console but to be honest I don’t know why I’m not getting any output on my HTML file</p>
+<p>Okay I know this is right because I can see it on my RStudio console but to be honest I don’t know why I’m not getting any output on my HTML file. I tried typing echo=TRUE, eval=TRUE, and cache=TRUE in the r code chunks and neither one worked.</p>
 </div>
 <div id="challenge-3" class="section level1">
 <h1>Challenge 3</h1>
@@ -168,62 +166,52 @@ a[1:5, 1:5,3,3]</code></pre>
 ## [4,]  147  142  137  132  127
 ## [5,]  146  141  136  131  126</code></pre>
 <pre class="r"><code># =the section of the matrix that is 3,3; 150:126</code></pre>
-</div>
-<div id="for-the-primates-list-i-know-that-i-want-the-name-to-be-primates.-then-maybe-a-separate-list-for-each-bullet-point" class="section level1">
-<h1>For the Primates list, I know that I want the name to be primates. Then maybe a separate list for each bullet point?</h1>
-</div>
-<div id="challenge-4" class="section level1">
-<h1>Challenge 4</h1>
-<p>c1&lt;- ‘Cercopithecidae’</p>
-<p>h1&lt;- ‘Hylobatidae’</p>
-<p>h2&lt;- ‘Hominidae’</p>
-<p>c2&lt;-list(c1, h1, h2)</p>
-<p>names(c2) &lt;- “Catarrhini”</p>
-<p>c3&lt;- ‘Cebidae’</p>
-<p>a1&lt;- ‘Atelidae’</p>
-<p>p1&lt;- ‘Pitheciidae’</p>
-<p>p2&lt;- list(c3, a1, p1)</p>
-<p>names(p2) &lt;- “Platyrrhini”</p>
-<p>a2&lt;- list(p2, c2)</p>
-<p>names(a2) &lt;- c(“Anthropoidea”, “Anthropoidea”)</p>
-<p>t1 &lt;- ‘Tarsiidae’</p>
-<p>t2 &lt;- list(t1)</p>
-<p>names(t2) &lt;- “Tarsioidea”</p>
-<p>h3&lt;- list(a2, t2)</p>
-<p>names(h3) &lt;- c(“Haplorhini”,“Haplorhini”)</p>
-<p>c4&lt;- ‘Cheirogaleidae’</p>
-<p>l1&lt;- ‘Lepilemuridae’</p>
-<p>i1&lt;- ‘Indriidae’</p>
-<p>l2&lt;- ‘Lemuridae’</p>
-<p>d1&lt;- ‘Daubentoniidae’</p>
-<p>l3&lt;- list(c4,l1,i1,l2,d1)</p>
-<p>names(l3) &lt;- “Lemuroidea”</p>
-<p>l4&lt;- ‘Lorisidae’</p>
-<p>g1&lt;- ‘Galagidae’</p>
-<p>l5&lt;- list(l4,g1)</p>
-<p>names(l5) &lt;- “Lorisoidea”</p>
-<p>s1&lt;- list(l5, l3)</p>
-<p>names(s1) &lt;- c(“Strepsirhini”,“Strepsirhini”)</p>
-<p>p3&lt;- list(h3,s1)</p>
-<p>names(p3) &lt;- c(“Primates”,“Primates”)</p>
+<p>For the Primates list, I know that I want the name to be primates. Then maybe a separate list for each bullet point? #Challenge 4</p>
+<pre class="r"><code>c1&lt;- 'Cercopithecidae'
+h1&lt;- 'Hylobatidae'
+h2&lt;- 'Hominidae'
+Catarrhini&lt;-list(c1, h1, h2)
+names(Catarrhini) &lt;- &quot;Catarrhini&quot;
+c3&lt;- 'Cebidae'
+a1&lt;- 'Atelidae'
+p1&lt;- 'Pitheciidae'
+Platyrrhini&lt;- list(c3, a1, p1)
+names(Platyrrhini) &lt;- &quot;Platyrrhini&quot;
+Anthropoidea&lt;- list(Platyrrhini, Catarrhini)
+names(Anthropoidea) &lt;- c(&quot;Anthropoidea&quot;, &quot;Anthropoidea&quot;)
+Tarsioidea &lt;- list(&quot;Tarsiidae&quot;)
+names(Tarsioidea) &lt;- &quot;Tarsioidea&quot;
+Haplorhini&lt;- list(Anthropoidea, Tarsioidea)
+names(Haplorhini) &lt;- c(&quot;Haplorhini&quot;,&quot;Haplorhini&quot;)
+c4&lt;- 'Cheirogaleidae'
+l1&lt;- 'Lepilemuridae'
+i1&lt;- 'Indriidae'
+l2&lt;- 'Lemuridae'
+d1&lt;- 'Daubentoniidae'
+Lemuroidea&lt;- list(c4,l1,i1,l2,d1)
+names(Lemuroidea) &lt;- c(&quot;Lemuroidea&quot;, &quot;Lemuroidea&quot;,&quot;Lemuroidea&quot;,&quot;Lemuroidea&quot;,&quot;Lemuroidea&quot;)
+l4&lt;- 'Lorisidae'
+g1&lt;- 'Galagidae'
+Lorisoidea&lt;- list(l4,g1)
+names(Lorisoidea) &lt;- c(&quot;Lorisoidea&quot;, &quot;Lorisoidea&quot;)
+Strepsirhini&lt;- list(Lorisoidea, Lemuroidea)
+names(Strepsirhini) &lt;- c(&quot;Strepsirhini&quot;,&quot;Strepsirhini&quot;)
+Primates&lt;- list(Haplorhini,Strepsirhini)
+names(Primates) &lt;- c(&quot;Primates&quot;,&quot;Primates&quot;)</code></pre>
+<p>Again, I’m not really sure why there is no output on my HTML file.</p>
 </div>
 <div id="challenge-5" class="section level1">
 <h1>Challenge 5</h1>
 <pre class="r"><code>q&lt;- matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2), nrow=5, ncol=3, byrow=TRUE)
-
 df&lt;- as.data.frame(q)
-
 df[ ,2] &lt;- as.logical(df[ ,2])
-
 df[ ,3] &lt;- as.factor(df[ ,3])
  str(df)</code></pre>
 <pre><code>## 'data.frame':    5 obs. of  3 variables:
 ##  $ V1: num  3 23 33 42 41
 ##  $ V2: logi  FALSE TRUE TRUE FALSE FALSE
 ##  $ V3: Factor w/ 2 levels &quot;1&quot;,&quot;2&quot;: 1 2 1 1 2</code></pre>
-</div>
-<div id="i-was-messed-up-before-because-i-was-trying-to-do-strq-which-is-what-i-named-the-matrix-but-i-renamed-it-df-after-i-set-it-up-as-a-data-frame" class="section level1">
-<h1>I was messed up before because I was trying to do str(q), which is what I named the matrix, but I renamed it df after I set it up as a data frame</h1>
+<p>Side-note: I was messed up before because I was trying to do str(q), which is what I named the matrix, but I renamed it df after I set it up as a data frame</p>
 </div>
 
 
